@@ -1,10 +1,12 @@
 import React, { useState } from "react"
 import "./login.css"
 import { authenticateUser } from "../../services/userService"
+import { useHistory } from "react-router-dom"
 
 export default function Login(){
     const [model, setModel] = useState({nome:"", email:"", senha:""})
     const [message, setMessage] = useState()
+    const history = useHistory()
 
     const Changemodel = ({target})=>{
         setModel((state)=>{

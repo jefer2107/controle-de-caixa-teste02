@@ -1,0 +1,15 @@
+.lista-produtos{
+    background-color: beige;
+}
+
+.lista-produtos thead{
+    background-color: #ddd;
+}
+
+.lista-produtos tr{
+    border: 1px solid black;
+}
+
+.lista-produtos td{
+    border: 1px solid black;
+}

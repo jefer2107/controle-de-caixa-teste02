@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react"
 import "./listaUsuario.css"
-import { returnItem } from "../../services/userService"
+import { returnItem } from "../../services/userRegistrationService"
 
 export default function UserList(){
     const [item, setItem] = useState([])
@@ -23,15 +23,15 @@ export default function UserList(){
                     </tr>
                 </thead>
                 <tbody className="text-center">
-                    {item.map((x)=>{
-                        return(
-                            <tr>
-                                <td> {x.id} </td>
-                                <td> {x.nome} </td>
-                                <td> {x.email} </td>
-                            </tr>
-                        )
-                    })}
+                   {item.map((x)=>{
+                       return(
+                           <tr>
+                               <td> {x.id} </td>
+                               <td> {x.nome} </td>
+                               <td> {x.email} </td>
+                           </tr>
+                       )
+                   })}
                 </tbody>
             </table>
         </div>
