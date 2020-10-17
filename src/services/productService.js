@@ -20,3 +20,12 @@ export const productRegistration = (item)=>{
 export const returnItem = ()=>{
     return Promise.resolve(product)
 }
+
+export const removeItem = (item)=>{
+    const itemToBeRemoved = product.findIndex(e=> e.codigo === item.codigo)
+
+    if(itemToBeRemoved) 
+
+    product.splice(itemToBeRemoved, 1)
+    return Promise.resolve()
+}

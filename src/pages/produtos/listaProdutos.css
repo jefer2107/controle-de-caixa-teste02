@@ -1,5 +1,7 @@
 .lista-produtos{
     background-color: beige;
+    margin: auto;
+    height: 100vh;
 }
 
 .lista-produtos thead{

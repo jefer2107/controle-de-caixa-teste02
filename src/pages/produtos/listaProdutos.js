@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react"
 import "./listaProdutos.css"
-import { returnItem } from "../../services/productService"
+import { returnItem, removeItem } from "../../services/productService"
 
 export default function ListaProdutos(){
     const [item, setItem] = useState([])
@@ -9,7 +9,18 @@ export default function ListaProdutos(){
         returnItem().then((x)=>{
             setItem(x)
         })
-    }, [item])
+    }, [item])  
+
+    const remove = (codigo)=>{
+        removeItem(codigo).then(()=>{
+            setItem((state)=>{
+                const newList = [...state]
+                const itemToBeRemoved = item.findIndex(e=>e.codigo === codigo)
+                newList.splice(itemToBeRemoved, 1)
+                return newList
+            })
+        })
+    }
 
     return(
         <div className="container-fluid lista-produtos">
@@ -22,6 +33,7 @@ export default function ListaProdutos(){
                         <td>TIPO</td>
                         <td>CÓD.BARRAS</td>
                         <td>VALOR</td>
+                        <td>EDIÇAO</td>
                     </tr>
                 </thead>
                 <tbody>
@@ -33,6 +45,12 @@ export default function ListaProdutos(){
                                 <td> {x.tipo} </td>
                                 <td> {x.codigo} </td>
                                 <td> {x.valor} </td>
+                                <td> 
+                                    <div className="text-center">
+                                        <button className="btn btn-primary">Editar</button> 
+                                        <button onClick={()=>remove(x.codigo)} className="btn btn-danger">Excluir</button>
+                                    </div>
+                                </td>
                             </tr>
                         )
                     })}
