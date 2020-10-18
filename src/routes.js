@@ -6,6 +6,7 @@ import UserList from "./pages/usuario/lista"
 import CadastroUsuario from "./pages/usuario/cadastroUsuario"
 import CadastroProduto from "./pages/produtos/cadastroProduto"
 import ListaProdutos from "./pages/produtos/listaProdutos"
+import EditarProduto from "./pages/produtos/editarProduto"
 
 
 export default function Routes(){
@@ -18,6 +19,7 @@ export default function Routes(){
                 <Route exact path="/cadastro-usuario" component={CadastroUsuario} />
                 <Route exact path="/cadastro-produto" component={CadastroProduto} />
                 <Route exact path="/lista-produtos" component={ListaProdutos} />
+                <Route exact path="/editar-produto/:id" component={EditarProduto} />
             </Switch>
         </BrowserRouter>
     )

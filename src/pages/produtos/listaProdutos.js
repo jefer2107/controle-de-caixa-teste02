@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from "react"
 import "./listaProdutos.css"
 import { returnItem, removeItem } from "../../services/productService"
+import { useHistory } from "react-router-dom"
 
 export default function ListaProdutos(){
     const [item, setItem] = useState([])
+    const history = useHistory()
 
     useEffect(()=>{
         returnItem().then((x)=>{
@@ -20,6 +22,10 @@ export default function ListaProdutos(){
                 return newList
             })
         })
+    }
+
+    const editar = (id)=>{
+        history.push(`/editar-produto/${id}`)
     }
 
     return(
@@ -47,7 +53,7 @@ export default function ListaProdutos(){
                                 <td> {x.valor} </td>
                                 <td> 
                                     <div className="text-center">
-                                        <button className="btn btn-primary">Editar</button> 
+                                        <button onClick={()=>editar(x.id)} className="btn btn-primary">Editar</button> 
                                         <button onClick={()=>remove(x.codigo)} className="btn btn-danger">Excluir</button>
                                     </div>
                                 </td>
