@@ -32,10 +32,17 @@ export const returnItemById = (id)=>{
     if(itemToBeReturn) return Promise.resolve(itemToBeReturn)
 }
 
-export const removeItem = (item)=>{
-    const itemToBeRemoved = product.findIndex(e=> e.codigo === item.codigo)
+export const returnItemByCode = (codigo)=>{
+    const codeToBeReturn = product.find(e=>e.codigo === codigo)
 
-    if(itemToBeRemoved) 
+    if(!codeToBeReturn) 
+        return Promise.reject("Ítem nao encontrado")
+    else
+        return Promise.resolve(codeToBeReturn)
+}
+
+export const removeItem = (item)=>{
+    const itemToBeRemoved = product.findIndex(e=> e.codigo === item)
 
     product.splice(itemToBeRemoved, 1)
     return Promise.resolve()

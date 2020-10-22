@@ -7,10 +7,11 @@ const user = [
     }
 ]
 
-let numberId;
+let numberId = 0;
 
 export const userRegister = (model)=>{
-    model.id = numberId++
+    numberId++
+    model.id = numberId
     const verifyRegister = user.find(e=>e.email === model.email)
 
     if(model.nome == "" || model.email == "" || model.senha == "") return Promise.reject("Primeiro deve preencher os campos vazios")

@@ -1,0 +1,17 @@
+.operador-caixa{
+    background-color:beige;
+    margin: auto;
+    height: 100vh;
+}
+
+.operador-caixa table thead{
+    background-color: #ddd;
+}
+
+.operador-caixa table tr{
+    border: 1px solid black;
+}
+
+.operador-caixa table td{
+    border: 1px solid black;
+}

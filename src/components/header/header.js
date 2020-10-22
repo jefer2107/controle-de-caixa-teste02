@@ -10,6 +10,7 @@ export default function Header(){
                 <li><Link to="/cadastro-usuario">Cadastro de Usuário</Link></li>
                 <li><Link to="/cadastro-produto">Cadastro de Produtos</Link></li>
                 <li><Link to="/lista-produtos">Lista de Produtos</Link></li>
+                <li><Link to="/operador-caixa">Operador de caixa</Link></li>
             </ul>
         </div>
     )

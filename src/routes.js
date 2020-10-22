@@ -7,6 +7,7 @@ import CadastroUsuario from "./pages/usuario/cadastroUsuario"
 import CadastroProduto from "./pages/produtos/cadastroProduto"
 import ListaProdutos from "./pages/produtos/listaProdutos"
 import EditarProduto from "./pages/produtos/editarProduto"
+import OperadorCaixa from "./pages/produtos/operadorCaixa"
 
 
 export default function Routes(){
@@ -20,6 +21,7 @@ export default function Routes(){
                 <Route exact path="/cadastro-produto" component={CadastroProduto} />
                 <Route exact path="/lista-produtos" component={ListaProdutos} />
                 <Route exact path="/editar-produto/:id" component={EditarProduto} />
+                <Route exact path="/operador-caixa" component={OperadorCaixa} />
             </Switch>
         </BrowserRouter>
     )
