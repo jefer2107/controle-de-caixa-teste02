@@ -4,14 +4,34 @@
     height: 100vh;
 }
 
-.operador-caixa table thead{
+.operador-caixa .tabela-1 thead{
     background-color: #ddd;
 }
 
-.operador-caixa table tr{
+.operador-caixa .tabela-1 tbody{
+    background-color: white;
+}
+
+.operador-caixa .tabela-1 tr{
     border: 1px solid black;
 }
 
-.operador-caixa table td{
+.operador-caixa .tabela-1 td{
+    border: 1px solid black;
+}
+
+.operador-caixa .tabela-2 .td-1{
+    background-color: #ddd;
+}
+
+.operador-caixa .tabela-2 .td-2{
+    background-color: white;
+}
+
+.operador-caixa .tabela-2 tr{
+    border: 1px solid black;
+}
+
+.operador-caixa .tabela-2 td{
     border: 1px solid black;
 }

@@ -8,6 +8,10 @@
     background-color: #ddd;
 }
 
+.lista-produtos tbody{
+    background-color: white;
+}
+
 .lista-produtos tr{
     border: 1px solid black;
 }
